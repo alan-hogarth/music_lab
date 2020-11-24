@@ -11,6 +11,5 @@ CREATE TABLE albums(
     id SERIAL PRIMARY KEY,
     artist_id INT REFERENCES artists(id),
     title VARCHAR(255),
-    release_date VARCHAR (255),
-    no_of_tracks INT
+    genre VARCHAR(255)
 );
