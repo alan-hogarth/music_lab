@@ -7,9 +7,13 @@ import repositories.album_repository as album_repository
 album_repository.delete_all()
 artist_repository.delete_all()
 
-mj = Artist("Michael", "Jackson")
-artist_repository.save(mj)
+artist_1 = Artist("Michael", "Jackson")
+artist_repository.save(artist_1)
 
-thriller = Album("Thriller", "Disco Funk", mj)
+album_1 = Album("Thriller", "Disco Funk", artist_1)
+album_repository.save(album_1)
+
+album_2 = Album("Another Album", "Classical", artist_1)
+album_repository.save(album_2)
 
 pdb.set_trace()
